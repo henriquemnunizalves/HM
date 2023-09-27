@@ -1,32 +1,14 @@
-# Prerequisites
-*.d
+include <stdbool.h>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+// Definição da estrutura da lista sequencial
+typedef struct {
+    int* elements; // Array para armazenar os elementos
+    int size;      // Tamanho atual da lista
+    int capacity;  // Capacidade máxima da lista
+} ListSeq;
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+// Função para verificar se a lista está vazia
+bool list_is_empty(ListSeq* list) {
+    // Se o tamanho da lista for igual a zero, ela está vazia
+    return list->size == 0;
+}
